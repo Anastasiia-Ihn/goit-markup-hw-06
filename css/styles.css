@@ -444,7 +444,9 @@ img {
 .blok-footer {
   margin-right: 120px;
 }
-
+.social-footer {
+  margin-right: 80px;
+}
 .socials-footer {
   gap: 16px;
 }
@@ -459,6 +461,19 @@ img {
 .socials-link-footer:hover,
 .socials-link-footer:focus {
   background-color: var(--color-green);
+}
+
+.text-subscribe {
+  margin-bottom: 16px;
+}
+.text-user-mail {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-white);
+}
+.user-name {
+  height: 40px;
+  width: 264px;
 }
 
 /* Portfolio */
