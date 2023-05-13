@@ -471,9 +471,13 @@ img {
   line-height: 1.5;
   color: var(--color-white);
 }
-.user-name {
+.user-mail {
   height: 40px;
   width: 264px;
+}
+
+.btn-subscribe-footer {
+  background-color: var(--color-iris);
 }
 
 /* Portfolio */
@@ -614,9 +618,11 @@ img {
   left: calc(50%);
   transform: translate(-50%, -50%);
 
+  padding: 24px;
   width: 408px;
   min-height: 576px;
   border-radius: 4px;
+
   background-color: var(--color-dairy);
   box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.2), 3px 0px 1px rgba(0, 0, 0, 0.12),
     1px 0px 1px rgba(0, 0, 0, 0.14);
@@ -663,4 +669,15 @@ img {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+label {
+  display: block;
+}
+.modal-text {
+  font-weight: 500;
+}
+textarea {
+  resize: none;
+  width: 360px;
 }
