@@ -463,24 +463,87 @@ img {
   background-color: var(--color-green);
 }
 
-.text-subscribe {
-  margin-bottom: 16px;
+/* subscribe */
+.subscribe-form {
+  display: flex;
+  gap: 24px;
 }
-.text-user-mail {
+.subscribe-user-mail {
+  position: relative;
+  width: 264px;
+  font-size: 12px;
+}
+
+.user-mail-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 60px;
+
+  background-color: transparent;
+  border: none;
+  border: 1px solid var(--color-white);
+  border-radius: 4px;
+  color: var(--color-white);
+
+  transition: border-color var(--animation);
+}
+
+.user-mail-input:focus {
+  border-color: var(--color-iris);
+}
+.text-mail {
+  position: absolute;
+  top: calc(50%);
+  left: 0;
+  transform: translate(50%, -50%);
+
   font-size: 12px;
   line-height: 1.5;
+  letter-spacing: 0.04em;
   color: var(--color-white);
-}
-.user-mail {
-  height: 40px;
-  width: 264px;
 }
 
 .btn-subscribe-footer {
-  background-color: var(--color-iris);
+  display: flex;
+  padding: 8px 24px;
+  margin: 0;
+  height: 40px;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--color-white);
+}
+
+.button-subscribe-text {
+  margin-right: 15px;
+}
+.btn-icon {
+  justify-content: center;
+
+  fill: var(--color-white);
+}
+
+/* .user-mail:required {
+  border-color: rgb(129, 18, 18);
+}
+
+.user-mail:valid {
+  border-color: rgb(16, 121, 68);
+}
+.user-mail:invalid {
+  border-color: rgb(129, 18, 18);
+} */
+
+input:focus-visible {
+  outline: 0px;
 }
 
 /* Portfolio */
+
 .section-portfolio {
   padding-top: 96px;
   padding-bottom: 120px;
@@ -676,8 +739,66 @@ label {
 }
 .modal-text {
   font-weight: 500;
+  margin-top: 48px;
 }
-textarea {
+
+.modal-text {
+  margin-bottom: 16px;
+}
+
+.modal-form {
+}
+.form-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 1.17;
+  color: var(--color-light-slate);
+}
+.form-wrapper {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.form-field,
+.modal-textarea {
+  width: 100%;
+  padding-left: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 12px;
+  border: 1px Solid var(--color-modal);
+  border-radius: 4px;
+  transition: border-color var(--animation);
+}
+
+.form-field:focus,
+.form-field:hover,
+.modal-textarea:hover,
+.modal-textarea :focus {
+  border-color: var(--color-iris);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+
+  transition: fill var(--animation);
+}
+
+.form-field:focus + .form-icon,
+.form-field:hover + .form-icon {
+  fill: var(--color-iris);
+}
+.modal-textarea {
   resize: none;
-  width: 360px;
+
+  height: 120px;
+  padding: 12px 16px;
+}
+.modal-textarea:focus-visible {
+  outline: 0px;
 }
