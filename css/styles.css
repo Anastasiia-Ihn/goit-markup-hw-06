@@ -772,11 +772,13 @@ label {
   border-radius: 4px;
   transition: border-color var(--animation);
 }
+.form-field {
+  font-size: 14px;
+}
 
 .form-field:focus,
-.form-field:hover,
-.modal-textarea:hover,
-.modal-textarea :focus {
+.modal-textarea:focus,
+.form-custom-check:focus {
   border-color: var(--color-iris);
 }
 
@@ -785,6 +787,8 @@ label {
   top: 50%;
   left: 0;
   transform: translate(50%, -50%);
+
+  fill: var(--color-navy-blue-modal);
 
   transition: fill var(--animation);
 }
@@ -798,7 +802,45 @@ label {
 
   height: 120px;
   padding: 12px 16px;
+  margin-bottom: 16px;
 }
 .modal-textarea:focus-visible {
   outline: 0px;
+}
+.form-agreement {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+}
+.form-check-input {
+  appearance: none;
+  display: block;
+}
+.form-custom-check {
+  margin-right: 8px;
+}
+
+.text-p-policy {
+  color: var(--color-light-slate);
+  user-select: none;
+}
+.unchecked {
+  opacity: 1;
+  transition: opacity var(--animation);
+}
+.checked {
+  opacity: 0;
+  transition: opacity var(--animation);
+}
+
+.form-check-input:checked + .form-custom-check > .unchecked {
+  opacity: 0;
+}
+.form-check-input:checked + .form-custom-check > .checked {
+  opacity: 1;
 }
