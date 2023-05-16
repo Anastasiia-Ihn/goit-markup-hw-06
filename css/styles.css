@@ -445,7 +445,7 @@ img {
   margin-right: 120px;
 }
 .social-footer {
-  margin-right: 80px;
+  margin-right: auto;
 }
 .socials-footer {
   gap: 16px;
@@ -477,8 +477,8 @@ img {
 .user-mail-input {
   width: 100%;
   height: 40px;
-  padding-left: 60px;
 
+  padding-left: 16px;
   background-color: transparent;
   border: none;
   border: 1px solid var(--color-white);
@@ -491,16 +491,12 @@ img {
 .user-mail-input:focus {
   border-color: var(--color-iris);
 }
-.text-mail {
+
+.user-mail-input::placeholder {
   position: absolute;
   top: calc(50%);
   left: 0;
   transform: translate(50%, -50%);
-
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--color-white);
 }
 
 .btn-subscribe-footer {
@@ -508,6 +504,7 @@ img {
   padding: 8px 24px;
   margin: 0;
   height: 40px;
+  gap: 16px;
 
   align-items: center;
   justify-content: center;
@@ -518,9 +515,6 @@ img {
   color: var(--color-white);
 }
 
-.button-subscribe-text {
-  margin-right: 15px;
-}
 .btn-icon {
   justify-content: center;
 
@@ -663,7 +657,10 @@ input:focus-visible {
 .footer {
   padding: 100px 0;
 }
-
+/*  */
+/*  */
+/*  */
+/*  */
 /* Modal window */
 .backdrop {
   /* display: none; */
@@ -681,7 +678,7 @@ input:focus-visible {
   left: calc(50%);
   transform: translate(-50%, -50%);
 
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   width: 408px;
   min-height: 576px;
   border-radius: 4px;
@@ -739,7 +736,6 @@ label {
 }
 .modal-text {
   font-weight: 500;
-  margin-top: 48px;
 }
 
 .modal-text {
@@ -764,9 +760,8 @@ label {
 .form-field,
 .modal-textarea {
   width: 100%;
-  padding-left: 30px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-left: 40px;
+  height: 40px;
   font-size: 12px;
   border: 1px Solid var(--color-modal);
   border-radius: 4px;
@@ -786,7 +781,8 @@ label {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(50%, -50%);
+  transform: translateY(-50%);
+  margin-left: 16px;
 
   fill: var(--color-navy-blue-modal);
 
@@ -828,6 +824,9 @@ label {
 .text-p-policy {
   color: var(--color-light-slate);
   user-select: none;
+}
+.link-p-policy {
+  color: var(--color-iris);
 }
 .unchecked {
   opacity: 1;
